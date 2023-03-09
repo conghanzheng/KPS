@@ -7,10 +7,8 @@ import sys
 scriptpath = sys.path[0]
 
 import os
-R_xlsx = pd.read_excel(os.path.join(scriptpath, 'Correlations_2022.xlsx'), index_col=0, header=0)
+R_xlsx = pd.read_excel(os.path.join(scriptpath, 'Correlations.xlsx'), index_col=0, header=0)
 R = np.array(R_xlsx)
-
-print(np.shape(R))
 
 p = 5
 k = 9
