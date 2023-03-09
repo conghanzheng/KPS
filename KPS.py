@@ -22,9 +22,6 @@ for i in range(1,p+1):
         block_ij = R[((i-1)*k):(i*k), ((j-1)*k):(j*k)] # k*k     
         vector_ij = block_ij.flatten(order='F') # k^2*1
         R_cal[(j-1)*p+i-1,:] = vector_ij # the p-th row
-
-print(np.shape(R_cal))        
-print(R_cal[7])
     
 L, Sigma_v, Nt = np.linalg.svd(R_cal) ## equation (9)
 Sigma = np.diag(Sigma_v)
