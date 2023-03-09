@@ -7,7 +7,7 @@ import sys
 scriptpath = sys.path[0]
 
 import os
-R_xlsx = pd.read_excel(os.path.join(scriptpath, 'Correlations.xlsx'))
+R_xlsx = pd.read_excel("https://github.com/conghanzheng/KPS/blob/a15b837cd5242fa9e9f021c782b2cf9b29ecd0a2/Correlations_2022.xlsx", engine='xlrd')
 R = np.array(R_xlsx)
 
 p = 5
