@@ -76,6 +76,7 @@ for t in range(len(R_list)):
 V = np.cov(vec_R_cal_n, rowvar = False)
 
 L, Sigma_v, Nt = np.linalg.svd(R_cal) ## equation (9)
+# L, Sigma_v, Nt = scipy.linalg.svd(R_cal,lapack_driver='gesvd') ## alternative method
 Sigma = np.diag(Sigma_v)
 N = Nt.T
 
